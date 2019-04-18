@@ -1,0 +1,33 @@
+#body {
+    background-color: white;
+    padding: 20px;
+    margin: 70px;
+    border-radius: 6px;
+}
+
+.box {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    flex-grow: 1;
+}
+
+p {
+    word-break: break-all;
+}
+
+@media screen and (max-width: 480px) {
+    .box {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+button {
+    font-weight: bold;
+    margin: 5px;
+}

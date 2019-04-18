@@ -1,0 +1,19 @@
+<div id="body">
+  <div class="box mat-elevation-z8">
+    <h1>Bitcoin Testnet</h1>
+    <form [formGroup]="btcFormGroup" (ngSubmit)="getAddress(address.value, name.value)">
+
+      <mat-form-field appearance="outline">
+        <input matInput type="text" placeholder="Your Name" formControlName="name"/>
+        <mat-error *ngIf="name.invalid && (name.dirty || name.touched)">Name is required</mat-error>
+      </mat-form-field> 
+
+      <mat-form-field appearance="outline">
+        <input matInput type="text" placeholder="Enter BTC Address" formControlName="address"/>
+        <mat-error *ngIf="address.invalid && (address.dirty || address.touched)">Address is required</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary">SEARCH ADDRESS</button>
+      <button mat-raised-button color="accent" (click)="generate()">GENERATE TEST ADDRESS</button>
+    </form>
+  </div>
+</div>

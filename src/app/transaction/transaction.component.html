@@ -1,0 +1,43 @@
+<div id="body" class="mat-elevation-z8">
+    <h1>Welcome {{name}}, Balance Details</h1>
+    <mat-divider></mat-divider>
+    <div class="box" *ngIf="data">
+        <div class="left">
+            <h3>Your Balance</h3>
+        </div>
+        <div class="right">
+            <p>{{data.balance}}</p>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="box" *ngIf="data">
+        <div class="left">
+            <h3>Your Address</h3>
+        </div>
+        <div class="right">
+            <p>{{data.address}}</p>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="box" *ngIf="data">
+        <div class="left">
+            <h3>Received</h3>
+        </div>
+        <div class="right">
+            <p>{{data.total_received}}</p>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="box" *ngIf="data">
+        <div class="left">
+            <h3>Sent</h3>
+        </div>
+        <div class="right">
+            <p>{{data.total_sent}}</p>
+        </div>
+    </div>
+    <div class="box">
+        <button mat-raised-button color="primary" (click)="openDialog()">PAYMENT</button>
+        <button mat-raised-button color="accent" (click)="fundBalance(data.address)">Fund your balance (+100000)</button>
+    </div>
+</div>
