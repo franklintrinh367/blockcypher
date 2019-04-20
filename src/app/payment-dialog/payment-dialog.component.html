@@ -1,13 +1,13 @@
 <div id="body">
   <form [formGroup]="paymentForm">
     <mat-form-field>
-      <input matInput type="text" placeholder="Sender's Address" formGroupName="sender">
+      <input matInput type="text" placeholder="Receiver's Address" formControlName="receiver">
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput type="number" placeholder="Amount" formGroupName="amount">
+      <input matInput type="number" placeholder="Amount" formControlName="amount">
     </mat-form-field>
 
-    <button mat-raised-button color="primary">Make payment</button>
+    <button mat-raised-button color="primary" (click)="makePayment(receiver.value, amount.value)">Make payment</button>
   </form>
 </div>

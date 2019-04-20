@@ -24,12 +24,16 @@
     "@angular/router": "~7.0.0",
     "@ngrx/store": "^7.4.0",
     "axios": "^0.18.0",
+    "bigi": "^1.4.2",
+    "bitcoinjs-lib": "^5.0.2",
     "body-parser": "^1.18.3",
     "core-js": "^2.5.4",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "mongoose": "^5.5.2",
+    "pem": "^1.14.2",
     "rxjs": "~6.3.3",
+    "secp256k1": "^3.6.2",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

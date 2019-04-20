@@ -28,7 +28,8 @@ export class TransactionComponent implements OnInit{
 
   openDialog() {
     this.dialog.open(PaymentDialogComponent, {
-      autoFocus: false
+      autoFocus: false,
+      data: this.data
     })
   }
 

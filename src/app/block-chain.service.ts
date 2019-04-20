@@ -21,6 +21,16 @@ export class BlockChainService{
     return this.http.post(`${this.baseUrl}/funding`, {addrs: addrs}, options)
   }
 
+  transfer(sender, receiver, amount) {
+    const options = {
+      headers: new HttpHeaders({'Content-Type' : 'application/json'})
+    }
+
+      return this.http.post(`${this.baseUrl}/createTrans`, {
+        sender: sender, receiver: receiver, amount : amount
+      }, options)
+  }
+
   generateAddress() : Observable<any> {
     return this.http.post(`${this.baseUrl}/generateAddress`, {})
   }
